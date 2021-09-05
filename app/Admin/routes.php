@@ -16,4 +16,7 @@ Route::group([
     $router->resource('users', UserController::class);
     $router->resource('cover-groups', CoverGroupController::class);
     $router->resource('covers', CoverController::class);
+    $router->resource('addresses', AddressController::class);
+    $router->resource('orders', OrderController::class);
+    $router->resource('formats', FormatController::class);
 });
