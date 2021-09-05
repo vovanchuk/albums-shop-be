@@ -12,7 +12,8 @@ Route::group([
     'middleware'    => config('admin.route.middleware'),
     'as'            => config('admin.route.prefix') . '.',
 ], function (Router $router) {
-
     $router->get('/', 'HomeController@index')->name('home');
     $router->resource('users', UserController::class);
+    $router->resource('cover-groups', CoverGroupController::class);
+    $router->resource('covers', CoverController::class);
 });
